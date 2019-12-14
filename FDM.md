@@ -91,9 +91,11 @@ Binary but portable
 
 #### Parallel HDF5 
 
+-   Designed to work with MPI and MPI-IO 
 
 
--   CDF. Binary and portable 
+
+#### CDF: Binary and portable 
 
 ### netCDF
 
@@ -209,6 +211,15 @@ Describes the valid structure and content for a XML document.
 
 -   W3C XML schemas
 -   DTD Document Type Definition 
+
+e.g. W3C schema
+
+>   The purpose of an XML Schema is to define the legal building blocks of an XML document:
+>
+>   -   the elements and attributes that can appear in a document
+>   -   the number of (and order of) child elements
+>   -   data types for elements and attributes
+>   -   default and fixed values for elements and attributes
 
 #### Phasers
 
