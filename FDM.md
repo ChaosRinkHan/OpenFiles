@@ -74,12 +74,12 @@ Binary but portable
 
 >   *HDF5 is a unique technology suite that makes possible the management of extremely large and complex data collections.* 
 
--   <!--A versatile **data model** that can represent very complex data objects and a wide variety of metadata.--> 
--   <!--A completely **portable file format** with no limit on the number or size of data objects in the collection.--> 
--   <!--A **software library that** runs on a range of computational platforms--> 
+<!--A versatile **data model** that can represent very complex data objects and a wide variety of metadata.--> 
+<!--A completely **portable file format** with no limit on the number or size of data objects in the collection.--> 
+<!--A **software library that** runs on a range of computational platforms--> 
 
--   <!--A rich set of integrated **performance** features that allow for access time and storage space optimizations.--> 
--   <!--Tools and applications for managing, manipulating, viewing, and analyzing the data in the collection.--> 
+<!--A rich set of integrated **performance** features that allow for access time and storage space optimizations.--> 
+<!--Tools and applications for managing, manipulating, viewing, and analyzing the data in the collection.--> 
 
 -   Based on *groups* and *datasets*
     -   Structure
@@ -90,8 +90,6 @@ Binary but portable
 -   Datasets: header, data array
 
 #### Parallel HDF5 
-
-
 
 
 
