@@ -376,15 +376,25 @@ Persistent Identity via Indirection
 
 ## Relational Databases 
 
+A Collection of tables (i.e., Relations) with associated relationships 
+
 ### ER (entity relationship) diagram
 
 -   Produces a data model representing a real-world situation 
     -   Identifies important entities (tables)
     -   Relationship between the entities. 
-
 -   Allows simplification of the data model
     -   E.g., Remove many-to-many relationships 
 -   Cardinality: 1-1. 1-m, m-1, m-n
+
+### Transactions
+
+A transaction is a sequence of operations performed (using one or more SQL statements) on a database as a single logical unit of work.
+
+-   **Atomic :** A transaction is a logical unit of work which must be either completed with all of its data modifications, or none of them is performed.
+-   **Consistent :** At the end of the transaction, all data must be left in a consistent state.
+-   **Isolated :** Modifications of data performed by a transaction must be independent of another transaction. Unless this happens, the outcome of a transaction may be erroneous.
+-   **Durable :** When the transaction is completed, effects of the modifications performed by the transaction must be permanent in the system.
 
 ## NoSQL Databases
 
