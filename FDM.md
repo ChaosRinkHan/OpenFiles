@@ -419,6 +419,10 @@ Refer to non-relational databases
 -   No join operations 
 -   No ACID transactions 
 
+------
+
+
+
 -   **Suitable** for **scalable** **unstructured** or **semi**-structured data 
 -   Also used for structured data where applications can store objects **without** any **transformations** 
 
