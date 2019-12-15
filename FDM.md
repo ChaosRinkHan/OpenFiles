@@ -166,6 +166,8 @@ Support parallel I/O
 
 ## XML & JSON
 
+### Why?
+
 -   Mainly used for platform and language neutral data **exchange** and **storage** 
     -   Both text based 
 -   Many **web services** support both XML and JSON based request and responses 
@@ -374,6 +376,18 @@ Persistent Identity via Indirection
 
 # Database
 
+Means of storing and accessing data efficiently 
+
+Usually contains a Database Management System (DBMS) 
+
+DBMS provides: 
+- Mechanisms to **create** data structure (e.g., Tables) and content
+- A means of querying and modifying content
+- Ways to optimise performance
+- Tools to **backup** and **restore** data 
+- Ways to allow applications to access data
+- Ways to **Authenticate** and **Authorise** users 
+
 ## Relational Databases 
 
 A Collection of tables (i.e., Relations) with associated relationships 
@@ -398,11 +412,16 @@ A transaction is a sequence of operations performed (using one or more SQL state
 
 ## NoSQL Databases
 
-No schemas are required 
+Refer to non-relational databases 
 
-No join operations 
+-   Designed for distributed storage with high horizontal scalability 
+-   No schemas are required 
+-   No join operations 
+-   No ACID transactions 
 
-No ACID transactions 
+### Data Models 
+
+• Key-Value • Document • Column • Graph 
 
 ### Mongo DB
 
@@ -411,7 +430,7 @@ Open Source JSON-**like** document based database management system
 -   High performance
 -   High availability
 
-Documents contains collections of key-value pairs
+**Documents** contains collections of key-value pairs
 
 4 basic CRUD operations: create, read, update, delete
 
@@ -556,9 +575,13 @@ A parallelisation pattern suitable for distributed systems
 
 ## Map
 
-A function is “mapped” over all of the input data. Return a list of (key, value) pairs
+A function is “mapped” over all of the input data. Return **a list of (key, value) pairs**
 
 -   When you do MapReduce at scale, the Map function is run on every node where the input data resides 
+
+## Reduce
+
+Reduce combines data back together–a summary operation 
 
 ## Process
 
