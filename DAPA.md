@@ -20,11 +20,11 @@ Decompose operation into a sequence of *p* sub- operations and chain together pr
 
 Strong scaling. Inherently serial fraction $\alpha$. Run-time $T_p=\alpha T_s+(1-\alpha)T_s/p$
 
-![image-20191208005426635](/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208005426635.png)
+![image-20191208005426635](https://i.imgur.com/sThmt13.png)
 
  𝑃 → ∞, s→$1/\alpha$
 
-<img src="/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208005519748.png" alt="image-20191208005519748" style="zoom:67%;" />
+<img src="https://i.imgur.com/H1vmpxz.png" alt="image-20191208005519748" style="zoom:67%;" />
 
 Real-world scaling: the parallel fraction isn’t trivially parallelisable. Serial fraction is hard to determine.
 
@@ -48,25 +48,25 @@ $T_s(N)\propto T_s(1), T(P,N)\propto T_s(1)$
 
 ##### Amdahl’s Law
 
-![image-20191208012629313](/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208012629313.png)
+<img src="https://i.imgur.com/S3Iobxz.png" alt="image-20191208012629313" style="zoom:50%;" />
 
 ##### Gustafson’s Law
 
-![image-20191208012652481](/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208012652481.png)
+<img src="https://i.imgur.com/JYOedO8.png" alt="image-20191208012652481" style="zoom:50%;" />
 
 ### Asymptotic analysis
 
 Asymptotic (“big-O”) notation captures this idea as “upper”, “lower”, and “tight” bounds. **Constant factors are ignored.** 
 
-![image-20191208013237909](/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208013237909.png)
+![image-20191208013237909](https://i.imgur.com/0oURReW.png)
 
 𝑓(𝑛) is *no more than* 𝑔(𝑛). 𝑔(𝑛) is the *upper bound*. 
 
-![image-20191208013442709](/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208013442709.png)
+![image-20191208013442709](https://i.imgur.com/KnE9Xv8.png)
 
 no less than; lower bound
 
-![image-20191208013455753](/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208013455753.png)
+![image-20191208013455753](https://i.imgur.com/W2nrldP.png)
 
 is *approximately* equal to, tight bound
 
@@ -150,5 +150,5 @@ The last process gets the same value as a reduction operation.
 
 ### Parallel communication primitives
 
-![image-20191208224014571](/Users/chaolinhan/Library/Application Support/typora-user-images/image-20191208224014571.png)
+<img src="https://i.imgur.com/AdXeUWr.png" alt="image-20191208224014571" style="zoom:50%;" />
 
