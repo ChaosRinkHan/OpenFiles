@@ -419,6 +419,9 @@ Refer to non-relational databases
 -   No join operations 
 -   No ACID transactions 
 
+-   **Suitable** for **scalable** **unstructured** or **semi**-structured data 
+-   Also used for structured data where applications can store objects **without** any **transformations** 
+
 ### Data Models 
 
 • Key-Value • Document • Column • Graph 
@@ -538,7 +541,9 @@ Open Archival Information System reference model
 -   Designed for central, long-term archives
     -   Long term
     -   Designated Community
+        -   Designed for a certain group with assumptions on background, which also defines how much RI is needed
     -   Representation Information (RI): 
+        -   Extra info that needs to be associated with the object so it can be understood 
 
 # Data infrastructure and hardware
 
