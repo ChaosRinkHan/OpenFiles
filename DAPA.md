@@ -1,6 +1,6 @@
-## DAPA
+# Parallel Algorithm
 
-### Divide & Conquer
+## Divide & Conquer
 
 Use recursive problem decomposition
 
@@ -10,17 +10,17 @@ Use recursive problem decomposition
 
 Well-known examples: quicksort, mergesort, matrix multiply (Strassen)
 
-### Pipelining 
+## Pipelining 
 
 Decompose operation into a sequence of *p* sub- operations and chain together processes (pipeline stages) for each sub-operation. 
 
-### Scaling laws
+## Scaling laws
 
-#### Amdahl’s Law
+### Amdahl’s Law
 
 Strong scaling. Inherently serial fraction $\alpha$. Run-time $T_p=\alpha T_s+(1-\alpha)T_s/p$
 
-![image-20191208005426635](https://i.imgur.com/sThmt13.png)
+$S_A(\alpha,P)=\frac{1}{\alpha+(1-\alpha)/p}$
 
  𝑃 → ∞, s→$1/\alpha$
 
@@ -28,7 +28,7 @@ Strong scaling. Inherently serial fraction $\alpha$. Run-time $T_p=\alpha T_s+(1
 
 Real-world scaling: the parallel fraction isn’t trivially parallelisable. Serial fraction is hard to determine.
 
-#### Gustafson’s Law
+### Gustafson’s Law
 
 Weak scaling: The problem size scales linearly with the number of processes. 
 
@@ -38,7 +38,7 @@ $S(\alpha, P, P) = \alpha+(1-\alpha)P$, set P=N. 𝑃 → ∞, 𝑆 → ∞
 
   Real-world scaling: plus the problem size is not really scaling linearly with the number of processes. 
 
-#### Generic scaling model
+### Generic scaling model
 
 $T(\alpha,P,N)=\alpha T_s(N)+(1-\alpha)T(P,N)$
 
@@ -46,15 +46,15 @@ $T_s(1)$ constant: serial run-time for the minimal problem.must be measured. Not
 
 $T_s(N)\propto T_s(1), T(P,N)\propto T_s(1)$
 
-##### Amdahl’s Law
+#### Amdahl’s Law
 
 <img src="https://i.imgur.com/S3Iobxz.png" alt="image-20191208012629313" style="zoom:50%;" />
 
-##### Gustafson’s Law
+#### Gustafson’s Law
 
 <img src="https://i.imgur.com/JYOedO8.png" alt="image-20191208012652481" style="zoom:50%;" />
 
-### Asymptotic analysis
+# Asymptotic analysis
 
 Asymptotic (“big-O”) notation captures this idea as “upper”, “lower”, and “tight” bounds. **Constant factors are ignored.** 
 
@@ -79,14 +79,14 @@ is *approximately* equal to, tight bound
 𝑂(𝑁)
  • No more than N, no worse than N. Upper bound. 
 
-### Architectures
+# Architectures
 
-#### Two dominant programming models
+## Two dominant programming models
 
 -   The *shared memory model* allows *threads* to interact directly through common memory locations. Care must be taken to ensure they don’t try to access the same memory location at the same time. 
 -   The *message passing model* gives each process its own address space. Care must be taken to ensure that data is sent to the right place at the right time. 
 
-#### Shared Address Space Parallelism
+## Shared Address Space Parallelism
 
 Real costs are complicated by cache coherence support, and congestion in the network. 
 
@@ -104,13 +104,13 @@ Assumptions:
     2.  CREW (concurrent-read, concurrent-write).
     3.  CRCW (concurrent-read, concurrent-write). 
 
-### CRCW write
+#### CRCW write
 
 Four variants for write clash resolution
 
 Common (write same value), arbitrary (only one successes), priority, associative
 
-### Metrics for Parallel Algorithms
+#### Metrics for Parallel Algorithms
 
 Cost $C=pT_P$. Cost optimal: $pT_p = T_s$
 
@@ -118,21 +118,44 @@ Speedup: $S=Ts/T_p$. Cost optimal: S=p.
 
 Parallel efficiency: $E=S/p$. Cost optimal: E=1.
 
-### Brent’s Theorem
+## Message passing model
+
+-   SF routing: store-and-forward
+-   CT routing: cut-through 
+
+### Cost
+
+SF: $T_{SF}=t_s+lmt_w$
+
+m: message size; l: no. links; ts: constant start-up time; tw: cost per word per link
+
+CT: $T_{CT}\propto t_s+l+mt_w$
+
+
+
+## Brent’s Theorem
+
+### PRAM
 
 A PRAM algorithm involving 𝑡 time steps and performing a total of 𝑚 operations, can be executed by 𝑝 processes in no more than $t+\frac {m-t}{p}$ time steps. 
 
 -   tells us that a better algorithm exists 
 -   round robin scheduling and Brent’s theorem only apply asymptotically to CRCW-associative algorithms 
 
-### Parallel computation primitives
+### Message passing algorithms
+
+Quotient networks
+
+## Parallel computation primitives
+
+## PRAM
 
 to support a bottom-up approach to algorithm design
 
 -   identify a collection of common operations and devise fast parallel implementations for each architecture
 -   design algorithms with these primitives as reusable components
 
-#### Reduction
+### Reduction
 
 values xi and an associative operator ⨁ 
 
@@ -140,7 +163,7 @@ Reduction computes $x_1⨁x_2⨁x_3⨁\cdots⨁x_n$
 
 -   both (reduce-to-all or reduce-to-one) have the same cost
 
-#### Prefix
+### Prefix
 
 Prefix (also called scan) computes $x_1. x_1⨁x_2, x_1⨁x_2⨁x_3, x_1⨁\cdots⨁x_n$
 
@@ -148,7 +171,6 @@ Each process has a *different value* when the prefix is done.
 
 The last process gets the same value as a reduction operation. 
 
-### Parallel communication primitives
+## Communication primitives
 
 <img src="https://i.imgur.com/AdXeUWr.png" alt="image-20191208224014571" style="zoom:50%;" />
-
