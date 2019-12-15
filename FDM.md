@@ -661,6 +661,15 @@ Spark’s in-memory capabilities are not the best fit for all use cases:
 -   Spark users are required to know that memory they have is sufficient for a dataset 
 -   Adding more users adds complications, since the users will have to coordinate memory usage to run code 
 
+# Data streaming
+
+## ML techniques
+
+-   Online learning 
+-   Offline learning
+-   Sequential access 
+-   Random access 
+
 # Blockchain
 
 Currently two types of blockchains 
