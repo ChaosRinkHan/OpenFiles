@@ -1,7 +1,7 @@
+# Overview
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-# Overview
 
 
 - [Data formats](#data-formats)
@@ -22,6 +22,7 @@
   - [Components](#components)
   - [Data management planning](#data-management-planning)
 - [Law](#law)
+  - [How to use a dataset](#how-to-use-a-dataset)
   - [GDPR](#gdpr)
 - [Archiving and preservation](#archiving-and-preservation)
   - [OAIS](#oais)
@@ -29,10 +30,13 @@
   - [Storage architecture](#storage-architecture)
 - [MapReduce](#mapreduce)
   - [Map](#map)
+  - [Reduce](#reduce)
   - [Process](#process)
 - [Hadoop](#hadoop)
   - [vs MPI/HPC• Fault tolerance](#vs-mpihpc%E2%80%A2-fault-tolerance)
   - [Apache Spark](#apache-spark)
+- [Data streaming](#data-streaming)
+  - [ML techniques](#ml-techniques)
 - [Blockchain](#blockchain)
   - [What](#what)
   - [Good use case](#good-use-case)
