@@ -415,8 +415,8 @@ A transaction is a sequence of operations performed (using one or more SQL state
 Refer to non-relational databases 
 
 -   Designed for distributed storage with high horizontal scalability 
--   No schemas are required 
--   No join operations 
+-   No schemas are required - flexibility
+-   No join operations - some naturally links related data – E.g., graph databases 
 -   No ACID transactions 
 
 ------
@@ -527,6 +527,10 @@ Plan -> acquire -> assure -> describe -> preserve -> discover -> combine -> proc
 5.  Budget 
 
 # Law
+
+## How to use a dataset
+
+Copyrightable? In copyright? Covered in an exemption? Is licensed? Is covered by license? -> Contact copyright owner
 
 ## GDPR
 
