@@ -494,7 +494,11 @@ SELECT, CONSTRUCT, DESCRIBE, ASK
     -   The data lifecycle maps well onto a typical research or experiment timeline 
     -   Planned and effective DM is becoming a feature of modern research 
 -   Product data management
+    -   (Almost) synonymous with – version control – configuration management 
+    -   Safety-critical industries may have regulatory requirements to keep versions of documents, engineering drawings etc. for decades 
 -   Test data management
+    -   In data-driven service industries (e.g. retail analytics), data used to train or develop classifiers or other insights needs to be managed in the same way 
+    -   Particularly important for provenance questions - reasoning 
 
 ## Components
 
