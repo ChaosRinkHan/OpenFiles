@@ -384,7 +384,8 @@ Means of storing and accessing data efficiently
 
 Usually contains a Database Management System (DBMS) 
 
-DBMS provides: 
+**DBMS** provides: 
+
 - Mechanisms to **create** data structure (e.g., Tables) and content
 - A means of querying and modifying content
 - Ways to optimise performance
@@ -400,32 +401,30 @@ A Collection of tables (i.e., Relations) with associated relationships
 
 -   Produces a data model representing a real-world situation 
     -   Identifies important entities (tables)
-    -   Relationship between the entities. 
--   Allows simplification of the data model
+    -   **Relationship** between the **entities**. 
+-   Allows **simplification** of the data model
     -   E.g., Remove many-to-many relationships 
 -   Cardinality: 1-1. 1-m, m-1, m-n
 
 ### Transactions
 
-A transaction is a sequence of operations performed (using one or more SQL statements) on a database as a single logical unit of work.
+A transaction is a **sequence** of operations performed (using one or more SQL statements) on a database as a single logical unit of work.
 
--   **Atomic :** A transaction is a logical unit of work which must be either completed with all of its data modifications, or none of them is performed.
--   **Consistent :** At the end of the transaction, all data must be left in a consistent state.
--   **Isolated :** Modifications of data performed by a transaction must be independent of another transaction. Unless this happens, the outcome of a transaction may be erroneous.
--   **Durable :** When the transaction is completed, effects of the modifications performed by the transaction must be permanent in the system.
+-   **Atomic :** A transaction is a logical unit of work which must be **either** completed with all of its data modifications, **or** none of them is performed.
+-   **Consistent :** At the end of the transaction, all data must be left in a **consistent state**.
+-   **Isolated :** Modifications of data performed by a transaction must be **independent** of another transaction. Unless this happens, the outcome of a transaction may be erroneous.
+-   **Durable :** When the transaction is completed, effects of the modifications performed by the transaction must be **permanent** in the system.
 
 ## NoSQL Databases
 
 Refer to non-relational databases 
 
--   Designed for distributed storage with high horizontal scalability 
--   No schemas are required - flexibility
--   No join operations - some naturally links related data – E.g., graph databases 
+-   Designed for **distributed** storage with high horizontal **scalability** 
+-   No schemas are required - **flexibility**
+-   No join operations - some naturally links related data – E.g., **graph** databases 
 -   No ACID transactions 
 
 ------
-
-
 
 -   **Suitable** for **scalable** **unstructured** or **semi**-structured data 
 -   Also used for structured data where applications can store objects **without** any **transformations** 
@@ -436,7 +435,7 @@ Refer to non-relational databases
 
 ### Mongo DB
 
-Open Source JSON-**like** document based database management system 
+Open Source JSON-like **document** based database management system 
 
 -   High performance
 -   High availability
@@ -449,27 +448,29 @@ Open Source JSON-**like** document based database management system
 
 Pros:
 
--   No duplication of data 
+-   No **duplication** of data 
 
 Cons: 
 
--   Requires several request for an update. First get the references. Then get the documents refer to by the references. And then update those documents 
+-   Requires **several** request for an update. First get the references. Then get the documents refer to by the references. And then update those documents 
 
 #### De-normalised Model
 
 Pros: 
 
--   Single document contains all interested data
+-   **Single** document contains all interested data
 -   Can be updated with single request 
 
 Cons:
 
--   Data duplication can occur 
+-   Data **duplication** can occur 
 -   If necessary, application would need to manage potential data duplication 
 
 ## RDF Database
 
 # Semantic data
+
+## RDF
 
 RDF is a data model: the **R**esource **D**escription **F**ramework 
 
@@ -495,18 +496,18 @@ SELECT, CONSTRUCT, DESCRIBE, ASK
 # Data lifecycle, DMP
 
 -   Research data management
-    -   The data lifecycle maps well onto a typical research or experiment timeline 
-    -   Planned and effective DM is becoming a feature of modern research 
+    -   The data lifecycle **maps** well onto a typical research or experiment **timeline** 
+    -   Planned and effective DM is becoming a **feature** of modern research 
 -   Product data management
-    -   (Almost) synonymous with – version control – configuration management 
+    -   (Almost) synonymous with – **version control – configuration management** 
     -   Safety-critical industries may have regulatory requirements to keep versions of documents, engineering drawings etc. for decades 
 -   Test data management
-    -   In data-driven service industries (e.g. retail analytics), data used to train or develop classifiers or other insights needs to be managed in the same way 
-    -   Particularly important for provenance questions - reasoning 
+    -   In **data-driven service** industries (e.g. retail analytics), data used to train or develop classifiers or other insights needs to be managed in the same way 
+    -   Particularly important for **provenance questions - reasoning** 
 
 ## Components
 
-Plan -> acquire -> assure -> describe -> preserve -> discover -> combine -> process -> plan -> ...
+**Plan** -> acquire -> assure -> describe -> preserve -> discover -> combine -> process -> **plan** -> ...
 
 ## Data management planning 
 
@@ -523,16 +524,16 @@ Plan -> acquire -> assure -> describe -> preserve -> discover -> combine -> proc
 -   Saves time
      – less reorganization later 
 -   Increases research efficiency 
--   Increasingly, compulsory!
+-   Increasingly, compulsory
      – research funding agencies now ask for DMPs for most proposals 
 
 ### Components
 
-1.  Information about data & data formats
-2.  Metadata content and format
-3.  Policies for access, sharing and re-use
-4.  Long-term storage and data management 
-5.  Budget 
+1.  Information about **data** & data formats
+2.  **Metadata** content and format
+3.  **Policies** for access, sharing and re-use
+4.  **Long-term** storage and data management 
+5.  **Budget** 
 
 # Law
 
@@ -544,7 +545,7 @@ Copyrightable? In copyright? Covered in an exemption? Is licensed? Is covered by
 
  General Data Protection Regulation 
 
--   codifies & harmonises data subject rights 
+-   codifies & harmonises **data subject** rights 
 
 # Archiving and preservation
 
@@ -554,7 +555,7 @@ Open Archival Information System reference model
 
 ![image-20191214111943930](https://i.imgur.com/XdNlAqU.png)
 
--   Designed for central, long-term archives
+-   Designed for **central, long-term** archives
     -   Long term
     -   Designated Community
         -   Designed for a certain group with assumptions on background, which also defines how much RI is needed
@@ -565,11 +566,11 @@ Open Archival Information System reference model
 
 -   Amdahl number
 
-    IO bandwidth (bits/s) / CPU clock rate = 1 (ideally)
+    IO bandwidth (**bits**/s) / CPU clock rate = 1 (ideally)
 
 -   Amdahl memory ratio
 
-    memory size (bytes) / instructions per second = 1 (ideally) 
+    memory size (**bytes**) / instructions per second = 1 (ideally) 
 
 -   Building an Amdahl-balanced system
 
@@ -602,7 +603,7 @@ A function is “mapped” over all of the input data. Return **a list of (key, 
 
 ## Reduce
 
-Reduce combines data back together–a summary operation 
+Reduce combines data back together – a summary operation 
 
 ## Process
 
@@ -610,16 +611,16 @@ Reduce combines data back together–a summary operation
 
 # Hadoop
 
-Distributed File System + Map Reduce Framework + Supporting Functionality 
+Distributed File **System** + Map Reduce **Framework** + Supporting **Functionality** 
 
 Each Hadoop job reads data from the HDFS and writes output to the HDFS 
 
--   Fine for short chains of processing 
--   Very inefficient for iterative algorithms
--   Spark – supports caching data 
+-   Fine for **short** chains of processing 
+-   Very **inefficient** for **iterative** algorithms
+-   Spark – supports **caching** data 
 -   Twister – iterative map reduce 
 
-## vs MPI/HPC• Fault tolerance 
+## vs MPI/HPC
 
 -   Fault tolerance 
     -   Hadoop is designed specifically with fault tolerance in mind 
@@ -656,7 +657,7 @@ Fast, expressive cluster computing system compatible with Apache Hadoop
 
 General-purpose cluster in-memory computing system 
 
-The **key concept** in Spark are datasets called **RDD**s (**R**esilient **D**istributed Dateset ) 
+The **key concept** in Spark are datasets called **RDD**s (**R**esilient **D**istributed **D**ataset ) 
 
 -    load data into RDDs and perform some **operations** 
 
@@ -665,7 +666,7 @@ Once created, RDDs offer two types of operations:
 -   transformations
 
     -   transformations include map, filter, join
-    -   lazy operation to build RDDs from other RDDs
+    -   **[lazy](https://stackoverflow.com/questions/38027877/spark-transformation-why-its-lazy-and-what-is-the-advantage/39438038#39438038?newreg=abd4601d30b14c318a66bb16918c1110)** operation to build RDDs from other RDDs
 
 -   actions
 
@@ -677,9 +678,9 @@ Once created, RDDs offer two types of operations:
 
 Spark’s in-memory capabilities are not the best fit for all use cases: 
 
--   For many simple use cases Apache MapReduce and Hive might be a more appropriate choice 
--   Spark was not designed as a multi-user environment 
--   Spark users are required to know that memory they have is sufficient for a dataset 
+-   For many **simple** use cases Apache MapReduce and Hive might be a more appropriate choice 
+-   Spark was **not** designed as a **multi**-user environment 
+-   Spark users are required to know that **memory** they have is sufficient for a dataset 
 -   Adding more users adds complications, since the users will have to coordinate memory usage to run code 
 
 # Data streaming
@@ -711,13 +712,9 @@ A distributed Ledger
 ## Good use case
 
 -   Business problem to be solved
-
 -   An identifiable business network
-
 -   A need for **Trust** 
-
-
-
+------
 - Asset trading
      - Stocks, Shares, Property, Music, Energy
     - Directly selling time-shares like taxi, rooms, office space 
@@ -728,7 +725,7 @@ A distributed Ledger
 
 ## Hyperledger Fabric 
 
-- Useful for business networks, e.g., 
+- Useful for **business** networks, e.g., 
      - Supply chain management
     - Assets trading 
 
