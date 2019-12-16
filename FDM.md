@@ -509,6 +509,14 @@ SELECT, CONSTRUCT, DESCRIBE, ASK
 
 **Plan** -> acquire -> assure -> describe -> preserve -> discover -> combine -> process -> **plan** -> ...
 
+-   Acquire: raw data, choose standard formats
+-   Assure: validate, calibrate and test on data and methods
+-   Describe: useful data to interpret the data (units, var. names, etc)
+-   Preserve: long term storage and accessibility 
+-   Discover: description, accessibility
+-   Combine: combining, integrating, merging; metadata, license
+-   Process: computing and data analysis
+
 ## Data management planning 
 
 ### What
@@ -560,7 +568,7 @@ Open Archival Information System reference model
     -   Designated Community
         -   Designed for a certain group with assumptions on background, which also defines how much RI is needed
     -   Representation Information (RI): 
-        -   Extra info that needs to be associated with the object so it can be understood 
+        -   Extra info that needs to be associated with the object so it can be understood (metadata, file formats)
 
 # Data infrastructure and hardware
 
