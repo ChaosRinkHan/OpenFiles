@@ -17,6 +17,7 @@
   - [NoSQL Databases](#nosql-databases)
   - [RDF Database](#rdf-database)
 - [Semantic data](#semantic-data)
+  - [RDF](#rdf)
   - [SPARQL](#sparql)
 - [Data lifecycle, DMP](#data-lifecycle-dmp)
   - [Components](#components)
@@ -33,7 +34,7 @@
   - [Reduce](#reduce)
   - [Process](#process)
 - [Hadoop](#hadoop)
-  - [vs MPI/HPC• Fault tolerance](#vs-mpihpc%E2%80%A2-fault-tolerance)
+  - [vs MPI/HPC](#vs-mpihpc)
   - [Apache Spark](#apache-spark)
 - [Data streaming](#data-streaming)
   - [ML techniques](#ml-techniques)
@@ -53,7 +54,7 @@ Digital data: encoding, file format, files, records
 -   Endian: big, little 
 -   Unicode, UTF
 
--   Format: interpreting decoded bit-groups (bytes, characters) 
+-   Format: interpreting **decoded** bit-groups (bytes, characters) 
 
 -   File: basic unit of data organisation. Pointer, metadata.
 -   Files vs objects
@@ -269,7 +270,7 @@ A description of what the data is. A means to *understand* the data, and possibl
 
 Embedded alongside the data, or in metadata files, indexes and catalogues.
 
-### why
+### Why
 
 -   Make your data more discoverable–to search on
 -   More reusable–understandable, finding related data
@@ -444,6 +445,8 @@ Open Source JSON-like **document** based database management system
 
 4 basic CRUD operations: create, read, update, delete
 
+Use indexes to support most common queries - will significantly improve performance of your queries
+
 #### Normalised Model
 
 Pros:
@@ -497,7 +500,7 @@ SELECT, CONSTRUCT, DESCRIBE, ASK
 
 -   Research data management
     -   The data lifecycle **maps** well onto a typical research or experiment **timeline** 
-    -   Planned and effective DM is becoming a **feature** of modern research 
+    -   Planned and effective DM is becoming a **feature** of modern research (data science concern)
 -   Product data management
     -   (Almost) synonymous with – **version control – configuration management** 
     -   Safety-critical industries may have regulatory requirements to keep versions of documents, engineering drawings etc. for decades 
