@@ -156,6 +156,7 @@ Support parallel I/O
 ![image-20191213153628155](https://i.imgur.com/jEeZRpG.png)
 
 -   MPI-I/O
+    -   Provide distributed access to single file
 
 ## Lustre
 
@@ -339,7 +340,7 @@ A controlled vocabulary
 
 ## Persistent Identifiers PID
 
-### why
+### Why
 
 Reliably refer to a particular piece of data.
 
@@ -347,11 +348,11 @@ Objects need to be (globally) addressable so that they can be reusable.
 
 Once data is addressable, it can be 
 
--   found more easily by you, other people, and computers – can be 
+-   found more easily by you, other people and computers
 -   cited
 -   linked together 
 
-### what
+### What
 
 Several different PID systems/infrastructures:
 
@@ -448,7 +449,7 @@ Open Source JSON-like **document** based database management system
 
 4 basic CRUD operations: create, read, update, delete
 
-Use indexes to support most common queries - will significantly improve performance of your queries
+Use **indexes** to support most common queries - will significantly improve performance of your queries
 
 #### Normalised Model
 
@@ -664,7 +665,7 @@ Each Hadoop job reads data from the HDFS and writes output to the HDFS
 
 Fast, expressive cluster computing system compatible with Apache Hadoop 
 
--   It is much faster and much easier than Hadoop MapReduce to use due its rich APIs 
+-   It is much **faster** and much **easier** than Hadoop MapReduce to use due its rich APIs 
 -   Large community 
 -   Goes far beyond batch applications to support a variety of workloads:
     -   including interactive queries, streaming, machine learning, and graph processing 
@@ -679,12 +680,12 @@ Once created, RDDs offer two types of operations:
 
 -   transformations
 
-    -   transformations include map, filter, join
+    -   transformations include **map**, **filter**, **join**
     -   **[lazy](https://stackoverflow.com/questions/38027877/spark-transformation-why-its-lazy-and-what-is-the-advantage/39438038#39438038?newreg=abd4601d30b14c318a66bb16918c1110)** operation to build RDDs from other RDDs
 
 -   actions
 
-    -   actions include count, collect, save 
+    -   actions include **count**, **collect**, **save** 
 
     -   return a result or write it to storage
 
@@ -702,6 +703,11 @@ Spark’s in-memory capabilities are not the best fit for all use cases:
 ## ML techniques
 
 -   Online learning 
+    -   Data becomes available sequentially
+    -   Model is updated continuously 
+    -   Data is discard after use
+    -   Not for multiple passes: cluster, k-means
+    -   Works for single pass: Naïve 👓️ Bayes
 -   Offline learning
 -   Sequential access 
 -   Random access 
